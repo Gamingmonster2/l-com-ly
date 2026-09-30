@@ -18,7 +18,7 @@ echo.
 
 echo [1/4] جلب التزامات GitHub...
 git fetch origin
-if errorlevel 1 goto :fetchfail
+if errorlevel 1 echo       تعذّر الجلب — سأكمل بما هو معروف محلياً إن وُجد.
 
 set REMOTE=origin/main
 git rev-parse --verify --quiet origin/main >nul
