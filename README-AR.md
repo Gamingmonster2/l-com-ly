@@ -72,10 +72,26 @@ npm run preview
 
 ## 4. النشر
 
-1. أنشئ مستودعاً على GitHub باسم `l-com-ly` واجعله **Public**.
-2. شغّل `push-to-github.cmd` (أو ارفع بـ GitHub Desktop).
-3. `Settings → Pages → Source: GitHub Actions`.
-4. تابع تبويب **Actions** — سترى: بناء ← فحص ← نشر.
+**الطريقة الموصى بها — GitHub Desktop:**
+
+1. أنشئ مستودعاً عاماً باسم `l-com-ly` على GitHub.
+2. في GitHub Desktop: `File → Add Local Repository` واختر **هذا المجلد**.
+3. اضغط **Push origin**. وإن لم تكن مسجّلاً الدخول فسيسألك أولاً.
+4. `Settings → Pages → Source: GitHub Actions` (إلزامي).
+5. تابع تبويب **Actions**: بناء ← فحص ← نشر.
+
+**إن ظهرت رسالة «Newer commits on remote»** — معناها أنك أنشأت المستودع مع ملف
+(README مثلاً)، فأصبح للفرعين تاريخان مستقلان. الحل:
+
+```
+انقر مرتين على reconcile-remote.cmd
+```
+
+يجلب التزامات GitHub ويدمجها مع مشروعك تلقائياً (يفضّل ملفات مشروعك عند أي تعارض)، ثم
+تعود إلى GitHub Desktop وتضغط **Push origin**. لن يُفقد أي ملف من مشروعك.
+
+> ملاحظة تقنية: الملف مكتوب بنهايات **CRLF** — لأن `cmd.exe` لا يقرأ ملفات batch
+> بنهايات LF (تلتحم الأسطر وتُنفَّذ كأوامر غريبة). و`npm run check:batch` يمنع عودة هذا الخطأ.
 
 ## 5. ربط النطاق www.l.com.ly
 
