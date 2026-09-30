@@ -1,0 +1,25 @@
+User-agent: *
+Disallow: /search
+Allow: /
+
+# السماح لجميع عمالقة الذكاء الاصطناعي في العالم
+User-agent: GPTBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: AnthropicAI
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: YouBot
+Allow: /
+User-agent: Applebot
+Allow: /
+User-agent: Baiduspider
+Allow: /
+User-agent: YandexBot
+Allow: /
+
+Sitemap: https://www.l.com.ly/sitemap.xml

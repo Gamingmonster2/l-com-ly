@@ -1,0 +1,18 @@
+{
+  "name": "l-com-ly-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "موقع L.COM.LY — نسخة ثابتة منشورة على GitHub Pages",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./dist/assets/style.css --minify",
+    "build": "node tools/build.mjs && npm run build:css",
+    "check": "node tools/check-site.mjs && node tools/check-css.mjs",
+    "check:css": "node tools/check-css.mjs",
+    "preview": "node tools/serve.mjs",
+    "test": "npm run build && npm run check"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

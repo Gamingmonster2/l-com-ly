@@ -1,0 +1,13 @@
+# نهايات الأسطر: LF في المستودع (لأن GitHub Actions يعمل على Linux)
+* text=auto eol=lf
+
+# ملفات ويندوز تحتاج CRLF
+*.cmd text eol=crlf
+
+# ملفات ثنائية
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary
+*.woff2 binary
