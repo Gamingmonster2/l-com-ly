@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "موقع L.COM.LY — نسخة ثابتة منشورة على GitHub Pages",
+  "description": "موقع L.COM.LY — نسخة ثابتة تعمل على أي استضافة",
   "scripts": {
-    "build:css": "tailwindcss -i ./src/input.css -o ./dist/assets/style.css --minify",
-    "build": "node tools/build.mjs && npm run build:css",
+    "build:css": "tailwindcss -i ./src/input.css -o ./assets/style.css --minify",
+    "build": "npm run build:css && node tools/build.mjs",
     "check": "node tools/check-site.mjs && node tools/check-css.mjs",
     "check:css": "node tools/check-css.mjs",
     "preview": "node tools/serve.mjs",

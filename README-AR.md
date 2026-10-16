@@ -10,14 +10,22 @@
 ## 1. كيف يعمل البناء
 
 ```
-index.html (مصدر)  ──►  tools/build.mjs  ──►  dist/        ──►  GitHub Pages
-404.html                    (نسخ)              index.html
-assets/app.js                                 404.html
-src/input.css ──► Tailwind (بناء CSS) ──►      assets/style.css
+src/input.css ──► Tailwind (بناء CSS) ──►  assets/style.css   ← يُودَع في المستودع
+                                              │
+index.html (مصدر)  ──►  tools/build.mjs  ─────┴──►  dist/     ──►  أي استضافة
+404.html                    (نسخ)                   index.html
+assets/*.js                                        404.html
+                                                    assets/style.css
 ```
 
-- **لا يوجد Tailwind CDN.** الملف `assets/style.css` يُبنى مسبقاً (‎~11 ك.ب) بدل تحميل محرّك
+- **لا يوجد Tailwind CDN.** الملف `assets/style.css` يُبنى مسبقاً (‎~32 ك.ب) بدل تحميل محرّك
   كامل داخل متصفح الزائر — هذا أكبر مكسب في سرعة الموقع.
+- **`assets/style.css` مُودَع في المستودع** (وليس في `dist` فقط). السبب: لو رفعت المستودع
+  إلى استضافة **بلا خطوة بناء** — مثل Cloudflare Pages بإعداد افتراضي — فسيبحث المتصفح عن
+  `assets/style.css` ولن يجده، فتظهر الصفحة **بلا تنسيق** (نصوص صغيرة وأيقونات ضخمة).
+  بوجوده في المستودع يعمل الموقع على أي استضافة، ومع البناء أيضاً.
+- **بعد أي تعديل على `index.html` شغّل `npm run build`** — وإلا بقي CSS قديماً. و`npm run check`
+  يكشف هذا التعارض ويفشل.
 - البناء يفشل **قبل** النشر إذا وجد بقايا بلوجر أو ملفاً ناقصاً (`tools/check-site.mjs`).
 
 ## 2. تشغيله محلياً
