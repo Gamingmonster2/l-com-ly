@@ -327,11 +327,18 @@ function start() {
       }
 
       renderSystem(
-        data.mode === "shadow"
-          ? "تم استلام رسالتك — سيرد عليك فريقنا بعد قليل 👌"
-          : "تم استلام رسالتك، جارٍ تحضير الرد…",
+        data.mode === "faq"
+          ? "…"
+          : data.mode === "shadow"
+            ? "تم استلام رسالتك — سيرد عليك فريقنا بعد قليل 👌"
+            : "تم استلام رسالتك، جارٍ تحضير الرد…",
       );
       await poll();
+      // في وضع الأسئلة الشائعة الرد جاهز فوراً — لا داعي لإبقاء سطر الانتظار
+      if (data.mode === "faq") {
+        const last = log.lastElementChild;
+        if (last && last.textContent === "…") last.remove();
+      }
     } catch {
       const last = log.lastElementChild;
       if (last && last.textContent === "… يرسل") last.remove();
