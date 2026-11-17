@@ -1,14 +1,11 @@
 name: Deploy to GitHub Pages
 
-# ملاحظة مهمة: يتطلب تفعيل Pages مرة واحدة يدوياً:
+# ملاحظة: يتطلب تفعيل Pages مرة واحدة يدوياً:
 #   Settings → Pages → Build and deployment → Source: GitHub Actions
-# لا يمكن تفعيله من داخل المسار: معامل enablement في configure-pages
-# يحتاج توكن غير GITHUB_TOKEN (مفتاحاً شخصياً)، وهو تعقيد لا داعي له
-# مقابل تغيير إعداد واحد.
 
 on:
   push:
-    branches: [main]
+    branches: [v2, main]
   workflow_dispatch:
 
 permissions:
@@ -22,37 +19,40 @@ concurrency:
 
 jobs:
   build:
-    name: بناء وفحص
+    name: بناء نسخة v2
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v7
+      - uses: actions/setup-node@v4
         with:
           node-version: "22"
+          cache: npm
 
-      - name: تثبيت الأدوات
-        run: npm install --no-audit --no-fund
+      - name: تثبيت الحزم
+        run: npm ci --no-audit --no-fund
 
-      - name: بناء الموقع (نسخ + Tailwind)
+      - name: بناء Vite
         run: npm run build
 
-      - name: فحص ما قبل النشر
-        run: npm run check
+      - name: نسخ ملفات Pages والـ SEO
+        run: |
+          cp CNAME 404.html robots.txt sitemap.xml dist/
+          cp -r redirects dist/
 
-      - uses: actions/configure-pages@v6
+      - uses: actions/configure-pages@v5
 
-      - uses: actions/upload-pages-artifact@v5
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
 
   deploy:
     name: نشر
-    needs: build
-    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@v4
