@@ -10,6 +10,7 @@ interface SafariProps extends React.HTMLAttributes<HTMLDivElement> {
   width?: number | string
   height?: number | string
   headerClassName?: string
+  showOpenLink?: boolean
 }
 
 export function Safari({
@@ -17,6 +18,7 @@ export function Safari({
   children,
   className,
   headerClassName,
+  showOpenLink = true,
   ...props
 }: SafariProps) {
   return (
@@ -61,18 +63,20 @@ export function Safari({
         </div>
 
         {/* Right Corner: External Link */}
-        <div className="flex items-center gap-2">
-          <a
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1 text-[11px] font-semibold text-primary hover:text-foreground/80 px-2 py-0.5 rounded-md hover:bg-primary/10 transition-colors"
-            title="Open in new window"
-          >
-            <span className="hidden sm:inline">Open</span>
-            <ExternalLink className="w-3.5 h-3.5" />
-          </a>
-        </div>
+        {showOpenLink && (
+          <div className="flex items-center gap-2">
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-[11px] font-semibold text-primary hover:text-foreground/80 px-2 py-0.5 rounded-md hover:bg-primary/10 transition-colors"
+              title="Open in new window"
+            >
+              <span className="hidden sm:inline">Open</span>
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
+          </div>
+        )}
       </div>
 
       {/* Browser Viewport Content */}

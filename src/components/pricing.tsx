@@ -4,15 +4,19 @@ import { BorderBeam } from "@/components/magicui/border-beam"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import {
-  Check,
-  Sparkles,
-  HelpCircle,
-  Heart,
-  Crown,
-  Cpu,
-  ArrowRight,
   ArrowLeft,
+  ArrowRight,
+  Banknote,
+  Building2,
+  Check,
+  Crown,
   Flame,
+  GitBranch,
+  Globe2,
+  Heart,
+  HelpCircle,
+  Smartphone,
+  Sparkles,
 } from "lucide-react"
 
 interface PricingProps {
@@ -25,67 +29,65 @@ export function Pricing({ lang, t, onSelectPlan }: PricingProps) {
   const getPlanIcon = (id: string) => {
     switch (id) {
       case "consultation":
-        return <HelpCircle className="w-5 h-5 text-foreground" />
+        return <HelpCircle className="h-5 w-5 text-foreground" />
       case "noor":
-        return <Heart className="w-5 h-5 text-foreground" />
-      case "identity":
-        return <Crown className="w-5 h-5 text-foreground/80" />
-      case "custom":
-        return <Cpu className="w-5 h-5 text-muted-foreground" />
+        return <Heart className="h-5 w-5 text-foreground" />
+      case "websites":
+        return <Crown className="h-5 w-5 text-foreground/80" />
+      case "apps":
+        return <Smartphone className="h-5 w-5 text-foreground/80" />
+      case "enterprise":
+        return <Building2 className="h-5 w-5 text-muted-foreground" />
       default:
-        return <Sparkles className="w-5 h-5 text-foreground" />
+        return <Sparkles className="h-5 w-5 text-foreground" />
     }
   }
 
   return (
     <section id="pricing" className="relative py-24 scroll-mt-20">
-      {/* Background ambient accents */}
-      <div className="pointer-events-none absolute top-1/3 end-0 w-96 h-96 bg-foreground/[0.06] rounded-full blur-[120px]" />
-      <div className="pointer-events-none absolute bottom-10 start-10 w-96 h-96 bg-foreground/[0.05] rounded-full blur-[120px]" />
+      <div className="pointer-events-none absolute top-1/3 end-0 h-96 w-96 rounded-full bg-foreground/[0.055] blur-[120px]" />
+      <div className="pointer-events-none absolute bottom-10 start-10 h-96 w-96 rounded-full bg-foreground/[0.045] blur-[120px]" />
 
-      <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+      <div className="relative z-10 mx-auto max-w-container px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto mb-14 max-w-3xl text-center">
           <BlurFade delay={0.05} yOffset={8}>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-foreground/[0.06] border border-foreground/10 text-xs font-semibold text-foreground/80 dark:text-foreground/70 mb-3">
-              <Sparkles className="w-3.5 h-3.5 text-foreground/80" />
+            <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-foreground/10 bg-foreground/[0.06] px-3.5 py-1 text-xs font-semibold text-foreground/80">
+              <Sparkles className="h-3.5 w-3.5 text-foreground/80" />
               <span>{t.pricing.badge}</span>
             </div>
           </BlurFade>
 
           <BlurFade delay={0.1} yOffset={10}>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-foreground mb-4">
+            <h2 className="mb-4 text-3xl font-black tracking-tight text-foreground sm:text-4xl lg:text-5xl">
               {t.pricing.title}
             </h2>
           </BlurFade>
 
           <BlurFade delay={0.15} yOffset={10}>
-            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+            <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
               {t.pricing.subtitle}
             </p>
           </BlurFade>
         </div>
 
-        {/* 4 Responsive Service Plans Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 items-stretch xl:grid-cols-3">
           {t.pricing.plans.map((plan, index) => {
             const isFeatured = !!plan.featured
 
             return (
               <BlurFade
                 key={plan.id}
-                delay={0.1 + index * 0.08}
+                delay={0.08 + index * 0.06}
                 yOffset={16}
                 className="h-full"
               >
                 <div
-                  className={`h-full relative rounded-3xl flex flex-col justify-between p-6 sm:p-7 transition-all duration-300 ${
+                  className={`relative flex h-full flex-col justify-between rounded-3xl p-6 transition-all duration-300 sm:p-7 ${
                     isFeatured
-                      ? "glass-card border-2 border-foreground/25 shadow-2xl shadow-foreground/[0.04] dark:shadow-foreground/[0.04] lg:-translate-y-3 z-20"
-                      : "glass-card border border-border/80 shadow-md hover:shadow-xl hover:border-foreground/20"
+                      ? "glass-card z-20 border-2 border-foreground/25 shadow-2xl shadow-foreground/[0.04] xl:-translate-y-3"
+                      : "glass-card border border-border/80 shadow-md hover:border-foreground/20 hover:shadow-xl"
                   }`}
                 >
-                  {/* BorderBeam for Featured Plan ("الهوية الرقمية") */}
                   {isFeatured && (
                     <BorderBeam
                       size={250}
@@ -97,97 +99,76 @@ export function Pricing({ lang, t, onSelectPlan }: PricingProps) {
                   )}
 
                   <div>
-                    {/* Top Header: Badge & Icon */}
-                    <div className="flex items-center justify-between gap-2 mb-4">
-                      <div className="p-2.5 rounded-2xl bg-muted/80 border border-border/60">
+                    <div className="mb-4 flex items-center justify-between gap-2">
+                      <div className="rounded-2xl border border-border/60 bg-muted/80 p-2.5">
                         {getPlanIcon(plan.id)}
                       </div>
                       <Badge
                         variant={plan.badgeVariant}
                         className={`text-[11px] font-bold ${
                           isFeatured
-                            ? "bg-gradient-to-r from-foreground/[0.08] to-foreground/[0.08] border-foreground/20 text-foreground/80 dark:text-foreground/70"
+                            ? "border-foreground/20 bg-gradient-to-r from-foreground/[0.08] to-foreground/[0.08] text-foreground/80"
                             : ""
                         }`}
                       >
-                        {isFeatured && <Flame className="w-3 h-3 me-1 text-foreground/80 inline fill-foreground" />}
+                        {isFeatured && (
+                          <Flame className="me-1 inline h-3 w-3 fill-foreground/80 text-foreground/80" />
+                        )}
                         {plan.badge}
                       </Badge>
                     </div>
 
-                    {/* Plan Name & Tagline */}
-                    <h3 className="text-xl font-bold text-foreground mb-1">
-                      {plan.name}
-                    </h3>
-                    <p className="text-xs text-muted-foreground leading-relaxed mb-5 min-h-[36px]">
+                    <h3 className="mb-1 text-xl font-bold text-foreground">{plan.name}</h3>
+                    <p className="mb-5 min-h-[36px] text-xs leading-relaxed text-muted-foreground">
                       {plan.tagline}
                     </p>
 
-                    {/* Price Block */}
-                    <div className="py-4 border-y border-border/60 mb-6">
-                      <div className="flex items-baseline gap-1">
-                        <span
-                          className={`text-2xl sm:text-3xl font-black ${
-                            isFeatured
-                              ? "text-transparent bg-clip-text bg-gradient-to-r from-foreground to-foreground dark:from-foreground/80 dark:to-foreground/80"
-                              : "text-foreground"
-                          }`}
-                        >
-                          {plan.price}
-                        </span>
-                      </div>
-                      <span className="text-[11px] text-muted-foreground font-medium block mt-1">
+                    <div className="mb-6 border-y border-border/60 py-4">
+                      <span
+                        className={`text-2xl font-black sm:text-3xl ${
+                          isFeatured
+                            ? "bg-gradient-to-r from-foreground to-foreground bg-clip-text text-transparent"
+                            : "text-foreground"
+                        }`}
+                      >
+                        {plan.price}
+                      </span>
+                      <span className="mt-1 block text-[11px] font-medium text-muted-foreground">
                         {plan.priceDetail}
                       </span>
                     </div>
 
-                    {/* Features List */}
-                    <ul className="space-y-3 mb-8">
+                    <ul className="mb-8 space-y-3">
                       {plan.features.map((feature, fIndex) => (
                         <li key={fIndex} className="flex items-start gap-2.5 text-xs sm:text-sm">
-                          <span
-                            className={`p-0.5 rounded-full mt-0.5 shrink-0 ${
-                              isFeatured
-                                ? "bg-foreground/[0.1] text-foreground/80"
-                                : plan.id === "noor"
-                                ? "bg-foreground/[0.1] text-foreground"
-                                : "bg-foreground/[0.1] text-foreground"
-                            }`}
-                          >
-                            <Check className="w-3.5 h-3.5 stroke-[2.5]" />
+                          <span className="mt-0.5 shrink-0 rounded-full bg-foreground/[0.1] p-0.5 text-foreground/80">
+                            <Check className="h-3.5 w-3.5 stroke-[2.5]" />
                           </span>
-                          <span className="text-foreground/80 leading-snug">
-                            {feature}
-                          </span>
+                          <span className="leading-snug text-foreground/80">{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  {/* Plan CTA Button */}
-                  <div className="pt-2 mt-auto">
+                  <div className="pt-2">
                     <Button
                       variant={
                         isFeatured
                           ? "gold"
-                          : plan.id === "noor"
+                          : plan.id === "noor" || plan.id === "consultation"
                           ? "emerald"
                           : "default"
                       }
-                      className="w-full rounded-2xl py-3 font-bold group shadow-md"
+                      className="group w-full rounded-2xl py-3 font-bold shadow-md"
                       onClick={() =>
-                        onSelectPlan({
-                          id: plan.id,
-                          name: plan.name,
-                          price: plan.price,
-                        })
+                        onSelectPlan({ id: plan.id, name: plan.name, price: plan.price })
                       }
                     >
                       <span>{plan.ctaText}</span>
                       {lang === "ar" ? (
-                        <ArrowLeft className="w-4 h-4 ms-2 group-hover:-translate-x-1 transition-transform" />
+                        <ArrowLeft className="ms-2 h-4 w-4 transition-transform group-hover:-translate-x-1" />
                       ) : (
-                        <ArrowRight className="w-4 h-4 ms-2 group-hover:translate-x-1 transition-transform" />
+                        <ArrowRight className="ms-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                       )}
                     </Button>
                   </div>
@@ -196,6 +177,42 @@ export function Pricing({ lang, t, onSelectPlan }: PricingProps) {
             )
           })}
         </div>
+
+        <BlurFade delay={0.3} yOffset={12} className="mt-12">
+          <div className="glass-card grid gap-4 rounded-3xl border border-border/70 p-5 shadow-md md:grid-cols-3 md:p-6">
+            <div className="flex items-start gap-3">
+              <span className="rounded-xl bg-foreground/[0.08] p-2.5 text-foreground">
+                <GitBranch className="h-4 w-4" />
+              </span>
+              <div>
+                <h3 className="text-sm font-bold text-foreground">
+                  {t.pricing.deliveryTitle}
+                </h3>
+                <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                  {t.pricing.deliveryText}
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <span className="rounded-xl bg-foreground/[0.08] p-2.5 text-foreground">
+                <Banknote className="h-4 w-4" />
+              </span>
+              <p className="text-xs leading-relaxed text-muted-foreground">
+                {t.pricing.libyaNote}
+              </p>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <span className="rounded-xl bg-foreground/[0.08] p-2.5 text-foreground">
+                <Globe2 className="h-4 w-4" />
+              </span>
+              <p className="text-xs leading-relaxed text-muted-foreground">
+                {t.pricing.domainNote}
+              </p>
+            </div>
+          </div>
+        </BlurFade>
       </div>
     </section>
   )

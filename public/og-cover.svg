@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="L.COM.LY — websites, web apps and Android apps from Libya to the world">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#080808"/>
+      <stop offset="1" stop-color="#171717"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fafafa" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#fafafa" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="980" cy="120" r="320" fill="url(#glow)"/>
+  <circle cx="180" cy="560" r="260" fill="url(#glow)"/>
+  <rect x="72" y="72" width="1056" height="486" rx="36" fill="none" stroke="#fafafa" stroke-opacity="0.14"/>
+  <text x="120" y="190" fill="#fafafa" font-family="Geist, Arial, sans-serif" font-size="76" font-weight="800" letter-spacing="-2">L.COM.LY</text>
+  <text x="122" y="250" fill="#a3a3a3" font-family="IBM Plex Sans Arabic, Arial, sans-serif" font-size="30">نحوّل فكرتك إلى موقع أو تطبيق حقيقي</text>
+  <text x="122" y="306" fill="#d4d4d4" font-family="Geist, Arial, sans-serif" font-size="27">Websites · Web Apps · Android Apps</text>
+  <rect x="120" y="360" width="360" height="64" rx="18" fill="#fafafa" fill-opacity="0.08" stroke="#fafafa" stroke-opacity="0.16"/>
+  <text x="150" y="403" fill="#fafafa" font-family="Geist, Arial, sans-serif" font-size="30" font-weight="700">$100 – $600</text>
+  <text x="520" y="402" fill="#a3a3a3" font-family="Geist, Arial, sans-serif" font-size="24">Website design by scope</text>
+  <text x="120" y="500" fill="#a3a3a3" font-family="Geist, Arial, sans-serif" font-size="23">Public GitHub delivery · GitHub Pages · Cloudflare Edge</text>
+  <text x="120" y="536" fill="#737373" font-family="IBM Plex Sans Arabic, Arial, sans-serif" font-size="22">استشارات ومواقع دينية مجانية — طرابلس، ليبيا</text>
+</svg>
