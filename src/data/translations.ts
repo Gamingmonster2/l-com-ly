@@ -58,6 +58,11 @@ export interface TranslationData {
     deliveryText: string
     libyaNote: string
     domainNote: string
+    limitsTitle: string
+    limitsText: string
+    negotiationTitle: string
+    negotiationText: string
+    negotiationCta: string
     plans: Array<{
       id: string
       name: string
@@ -232,6 +237,13 @@ export const translations: Record<Language, TranslationData> = {
         "عملاء ليبيا: يمكن التواصل والدفع بالدينار الليبي، مع حصولهم على تخفيض في السعر.",
       domainNote:
         "أسعار النطاقات غير مشمولة في الخدمة؛ السعر يعتمد على مزوّد النطاق الذي تختاره.",
+      limitsTitle: "ملاحظات مهمة",
+      limitsText:
+        "نستقبل حتى ثلاثة مشاريع دينية مجانية شهرياً ضمن مبادرة نور. أما الاستشارات التقنية فنرد عليها خلال ٣ إلى ٥ أيام عمل.",
+      negotiationTitle: "السعر مرتفع بالنسبة لك؟ لنتفاوض",
+      negotiationText:
+        "إن كان السعر مرتفعاً لديك، خصوصاً من ليبيا، أرسل لنا رسالة تخبرنا فيها بما تريد بناءه بالفعل وما الميزانية المناسبة لك، وسنجد حلاً يناسب الطرفين.",
+      negotiationCta: "تفاوض على السعر",
       plans: [
         {
           id: "consultation",
@@ -482,6 +494,13 @@ export const translations: Record<Language, TranslationData> = {
         "Clients in Libya: we can communicate and receive payment in LYD, with a discounted price.",
       domainNote:
         "Domain prices are not included; the final cost depends on your chosen registrar.",
+      limitsTitle: "Important notes",
+      limitsText:
+        "We take up to three free religious projects per month through the Noor Initiative. Technical consultation replies are sent within 3 to 5 business days.",
+      negotiationTitle: "Is the price too high? Let's negotiate",
+      negotiationText:
+        "If the price feels high to you — especially from Libya — send us a message telling us what you actually want to build and what budget works for you, and we will find a solution that suits both sides.",
+      negotiationCta: "Negotiate the price",
       plans: [
         {
           id: "consultation",

@@ -15,6 +15,7 @@ import {
   Globe2,
   Heart,
   HelpCircle,
+  MessageCircle,
   Smartphone,
   Sparkles,
 } from "lucide-react"
@@ -210,6 +211,57 @@ export function Pricing({ lang, t, onSelectPlan }: PricingProps) {
               <p className="text-xs leading-relaxed text-muted-foreground">
                 {t.pricing.domainNote}
               </p>
+            </div>
+          </div>
+        </BlurFade>
+
+        <BlurFade delay={0.35} yOffset={12} className="mt-5">
+          <div className="glass-card grid gap-4 rounded-3xl border border-border/70 p-5 shadow-md md:grid-cols-2 md:p-6">
+            <div className="flex items-start gap-3">
+              <span className="rounded-xl bg-foreground/[0.08] p-2.5 text-foreground">
+                <HelpCircle className="h-4 w-4" />
+              </span>
+              <div>
+                <h3 className="text-sm font-bold text-foreground">
+                  {t.pricing.limitsTitle}
+                </h3>
+                <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                  {t.pricing.limitsText}
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <span className="rounded-xl bg-foreground/[0.08] p-2.5 text-foreground">
+                <MessageCircle className="h-4 w-4" />
+              </span>
+              <div className="w-full">
+                <h3 className="text-sm font-bold text-foreground">
+                  {t.pricing.negotiationTitle}
+                </h3>
+                <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                  {t.pricing.negotiationText}
+                </p>
+                <Button
+                  variant="default"
+                  size="sm"
+                  className="group mt-3 rounded-xl px-4 py-2 text-xs font-bold"
+                  onClick={() =>
+                    onSelectPlan({
+                      id: "negotiation",
+                      name: t.pricing.negotiationCta,
+                      price: t.pricing.requestQuote,
+                    })
+                  }
+                >
+                  <span>{t.pricing.negotiationCta}</span>
+                  {lang === "ar" ? (
+                    <ArrowLeft className="ms-2 h-3.5 w-3.5 transition-transform group-hover:-translate-x-1" />
+                  ) : (
+                    <ArrowRight className="ms-2 h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                  )}
+                </Button>
+              </div>
             </div>
           </div>
         </BlurFade>
