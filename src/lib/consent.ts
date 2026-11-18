@@ -1,5 +1,8 @@
 /** إشعار الكوكيز + Google Consent Mode v2 — منقول من النسخة السابقة. */
 
+import { loadCloudflareAnalytics } from "@/lib/analytics"
+import { SITE } from "@/lib/site-config"
+
 export const CONSENT_KEY = "lcom_consent"
 
 export const CONSENT_GRANTED = {
@@ -45,8 +48,13 @@ export function writeConsent(decision: ConsentDecision): void {
 
 export function applyConsent(decision: ConsentDecision): ConsentState {
   const state = consentStateFor(decision)
-  if (typeof window !== "undefined" && typeof window.gtag === "function") {
-    window.gtag("consent", "update", state)
+  if (typeof window !== "undefined") {
+    if (typeof window.gtag === "function") {
+      window.gtag("consent", "update", state)
+    }
+    if (decision === "granted") {
+      loadCloudflareAnalytics(SITE.cloudflareAnalyticsToken)
+    }
   }
   return state
 }

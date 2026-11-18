@@ -84,7 +84,8 @@ export async function submitLead({
     const res = await fetch(workerUrl, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
+      // نفس عقد النسخة الأصلية: POST إلى جذر Worker مع type: "project".
+      body: JSON.stringify({ ...payload, type: "project" }),
       signal: controller.signal,
     })
 

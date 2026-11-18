@@ -14,8 +14,9 @@ export const SITE = {
   url: "https://www.l.com.ly/",
   email: "info@l.com.ly",
   gaMeasurementId: "G-R3ZC7B10TV",
-  workerUrl:
-    "https://lcomly-telegram-gateway.safealigoog.workers.dev/api/message",
+  cloudflareAnalyticsToken: "34b448a27e2a4082b3b71e3d4cd16d65",
+  // نفس رابط Worker المستخدم في النسخة الأصلية (جذر النطاق).
+  workerUrl: "https://lcomly-telegram-gateway.safealigoog.workers.dev",
   whatsapp: "",
 } as const
 
@@ -24,12 +25,19 @@ export function getWorkerUrl(): string {
   return window.LCOM_CONFIG?.workerUrl || SITE.workerUrl
 }
 
+export function getWorkerBaseUrl(): string {
+  return getWorkerUrl().replace(/\/+$/, "").replace(/\/api\/message$/, "")
+}
+
+export function getWorkerSubmitUrl(): string {
+  return `${getWorkerBaseUrl()}/`
+}
+
 export function getWhatsapp(): string {
   if (typeof window === "undefined") return SITE.whatsapp
   return window.LCOM_CONFIG?.whatsapp || SITE.whatsapp
 }
 
 export function getChatPollUrl(session: string, after: number): string {
-  const base = getWorkerUrl().replace(/\/api\/message\/?$/, "")
-  return `${base}/api/chat?session=${encodeURIComponent(session)}&after=${after}`
+  return `${getWorkerBaseUrl()}/api/chat?session=${encodeURIComponent(session)}&after=${after}`
 }
