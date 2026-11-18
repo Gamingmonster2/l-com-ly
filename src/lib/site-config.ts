@@ -17,7 +17,8 @@ export const SITE = {
   cloudflareAnalyticsToken: "34b448a27e2a4082b3b71e3d4cd16d65",
   // نفس رابط Worker المستخدم في النسخة الأصلية (جذر النطاق).
   workerUrl: "https://lcomly-telegram-gateway.safealigoog.workers.dev",
-  whatsapp: "",
+  // رقم الأعمال المعتمد بصيغة دولية (ليبيا +218). الرقم المحلي 0944119965.
+  whatsapp: "+218944119965",
 } as const
 
 export function getWorkerUrl(): string {

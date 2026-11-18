@@ -11,6 +11,7 @@ import {
   Globe,
   MapPin,
   Clock,
+  Phone,
   Send,
   CheckCircle2,
   Sparkles,
@@ -47,6 +48,13 @@ export function Contact({ lang, t }: ContactProps) {
   }>({ message: "", kind: "info" })
 
   const copy = widgetCopy[lang].form
+  const whatsappDigits = getWhatsapp().replace(/\D/g, "")
+  const whatsappHref = whatsappDigits
+    ? `https://wa.me/${whatsappDigits}?text=${encodeURIComponent(widgetCopy[lang].chat.waText)}`
+    : ""
+  const whatsappDisplay = whatsappDigits.startsWith("218")
+    ? `+218 ${whatsappDigits.slice(3, 5)} ${whatsappDigits.slice(5, 8)} ${whatsappDigits.slice(8)}`
+    : getWhatsapp() || "—"
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText("info@l.com.ly")
@@ -164,6 +172,34 @@ export function Contact({ lang, t }: ContactProps) {
                     {t.contact.infoSubtitle}
                   </p>
                 </div>
+
+                {/* WhatsApp Card — القناة الأسرع في ليبيا */}
+                {whatsappHref && (
+                  <div className="p-4 rounded-2xl bg-foreground/[0.04] border border-foreground/20 flex items-center justify-between group hover:border-foreground/40 transition-colors">
+                    <div className="flex items-center gap-3.5">
+                      <div className="p-2.5 rounded-xl bg-foreground text-background">
+                        <Phone className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <span className="text-[11px] text-muted-foreground font-semibold block">
+                          {t.contact.whatsappLabel}
+                        </span>
+                        <a
+                          href={whatsappHref}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          dir="ltr"
+                          className="text-sm sm:text-base font-bold text-foreground hover:underline"
+                        >
+                          {whatsappDisplay}
+                        </a>
+                      </div>
+                    </div>
+                    <Badge variant="blue" className="text-[11px]">
+                      {lang === "ar" ? "مباشر" : "Direct"}
+                    </Badge>
+                  </div>
+                )}
 
                 {/* Email Card (info@l.com.ly) */}
                 <div className="p-4 rounded-2xl bg-muted/60 border border-border/80 flex items-center justify-between group hover:border-foreground/20 transition-colors">

@@ -78,6 +78,7 @@ export interface TranslationData {
     infoTitle: string
     infoSubtitle: string
     contactEmailLabel: string
+    whatsappLabel: string
     domainLabel: string
     locationLabel: string
     locationValue: string
@@ -329,11 +330,12 @@ export const translations: Record<Language, TranslationData> = {
       infoTitle: "قنوات التواصل المباشرة",
       infoSubtitle: "سنرد على استفسارك ونحدد الخطوة التالية معاً.",
       contactEmailLabel: "البريد الإلكتروني المعتمد",
+      whatsappLabel: "واتساب — تواصل سريع",
       domainLabel: "البوابة الرقمية",
       locationLabel: "المقر",
       locationValue: "طرابلس، ليبيا — Tripoli, Libya",
       hoursLabel: "التواصل",
-      hoursValue: "عبر نموذج التواصل أو محادثة الموقع؛ والرد في أقرب وقت ممكن.",
+      hoursValue: "الأسرع عبر واتساب، أو نموذج التواصل ومحادثة الموقع.",
       formTitle: "أرسل تفاصيل مشروعك",
       nameLabel: "الاسم الكامل",
       namePlaceholder: "مثال: م. محمد الورفلي",
@@ -578,11 +580,12 @@ export const translations: Record<Language, TranslationData> = {
       infoTitle: "Direct contact channels",
       infoSubtitle: "We will reply and agree on the next step together.",
       contactEmailLabel: "Official email",
+      whatsappLabel: "WhatsApp — quick contact",
       domainLabel: "Digital portal",
       locationLabel: "Location",
       locationValue: "Tripoli, Libya — طرابلس، ليبيا",
       hoursLabel: "Availability",
-      hoursValue: "Use the contact form or site chat; we reply as soon as possible.",
+      hoursValue: "Fastest on WhatsApp, or use the contact form and site chat.",
       formTitle: "Send your project details",
       nameLabel: "Full Name",
       namePlaceholder: "e.g. Eng. Tarek Al-Fitouri",

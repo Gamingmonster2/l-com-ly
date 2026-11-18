@@ -15,7 +15,7 @@ import {
   type ChatMessage,
 } from "@/lib/chat"
 import { Button } from "@/components/ui/button"
-import { MessageCircle, Send, X, ExternalLink } from "lucide-react"
+import { MessageCircle, Phone, Send, X } from "lucide-react"
 
 export function ChatWidget({ lang }: { lang: Language }) {
   const copy = widgetCopy[lang].chat
@@ -254,7 +254,7 @@ export function ChatWidget({ lang }: { lang: Language }) {
           title={copy.waLabel}
           className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-card text-foreground shadow-lg transition-transform hover:scale-105"
         >
-          <ExternalLink className="h-5 w-5" />
+          <Phone className="h-5 w-5" />
         </a>
       )}
 
