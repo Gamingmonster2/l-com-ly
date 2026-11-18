@@ -19,7 +19,8 @@
 ```powershell
 npm ci
 npm run dev       # http://localhost:5173
-npm run build     # ينتج dist/
+npm run build       # ينتج dist/
+npm run build:pages # ينتج dist/ + CNAME/404/robots/sitemap/redirects
 npm run preview
 ```
 

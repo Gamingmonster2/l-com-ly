@@ -32,13 +32,8 @@ jobs:
       - name: تثبيت الحزم
         run: npm ci --no-audit --no-fund
 
-      - name: بناء Vite
-        run: npm run build
-
-      - name: نسخ ملفات Pages والـ SEO
-        run: |
-          cp CNAME 404.html robots.txt sitemap.xml dist/
-          cp -r redirects dist/
+      - name: بناء Vite ونسخ ملفات Pages والـ SEO
+        run: npm run build:pages
 
       - uses: actions/configure-pages@v5
 
