@@ -10,6 +10,7 @@ import { Footer } from "@/components/footer"
 import { PlanModal } from "@/components/plan-modal"
 import { CookieConsent } from "@/components/cookie-consent"
 import { ChatWidget } from "@/components/chat-widget"
+import { BrandIntro } from "@/components/brand-intro"
 
 export function App() {
   const [lang, setLang] = useState<Language>(() => {
@@ -109,6 +110,9 @@ export function App() {
         lang={lang}
         t={t}
       />
+
+      {/* Magic UI brand intro — shows once per session, auto-dismisses */}
+      <BrandIntro />
 
       {/* Ported legacy features: consent banner + live chat */}
       <CookieConsent lang={lang} />
