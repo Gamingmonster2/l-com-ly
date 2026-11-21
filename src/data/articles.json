@@ -1,0 +1,260 @@
+[
+  {
+    "slug": "how-we-build-websites",
+    "date": "2026-11-21",
+    "category": { "ar": "طريقة العمل", "en": "Our Process" },
+    "readMinutes": 6,
+    "keywords": {
+      "ar": "كيف نبني موقع، خطوات تصميم موقع، تسليم موقع ويب، L.COM.LY",
+      "en": "how we build a website, web design process, website delivery, L.COM.LY"
+    },
+    "title": {
+      "ar": "كيف نبني موقعك: من الفكرة إلى النشر في 6 خطوات",
+      "en": "How We Build Your Website: From Idea to Launch in 6 Steps"
+    },
+    "excerpt": {
+      "ar": "رحلة المشروع عندنا واضحة من البداية: استشارة مجانية، نطاق مكتوب، تصميم، بناء، تسليم المصدر على GitHub، ثم نشر على Cloudflare أو GitHub Pages. بلا وعود غامضة ولا مراحل مخفية.",
+      "en": "Our project journey is clear from day one: a free consultation, a written scope, design, build, source delivery on GitHub, then publishing on Cloudflare or GitHub Pages. No vague promises and no hidden stages."
+    },
+    "body": {
+      "ar": [
+        { "type": "p", "text": "كثير من العملاء يسألون: ماذا يحدث بالضبط بعد أن أرسل لكم رسالة؟ في L.COM.LY نؤمن أن الشفافية جزء من جودة التسليم، لذلك نشرح لك اليوم رحلة المشروع كاملة، خطوة بخطوة، وما الذي ستحصل عليه في كل مرحلة." },
+        { "type": "h2", "text": "١) الاستشارة المجانية: نفهم المشكلة قبل اقتراح الحل" },
+        { "type": "p", "text": "تبدأ كل مشروع باستشارة مجانية عبر نموذج التواصل أو واتساب أو محادثة الموقع. لا نبدأ بالسعر، بل بأسئلة بسيطة: من هو جمهورك؟ ماذا تريد أن يفعل الزائر عندما يفتح الموقع؟ هل لديك نطاق واستضافة بالفعل؟ الرد على الاستشارات يصل عادة خلال ٣ إلى ٥ أيام عمل، لأننا ندرس الفكرة قبل أن نجيب." },
+        { "type": "h2", "text": "٢) تحديد النطاق والسعر كتابةً" },
+        { "type": "p", "text": "بعد فهم الفكرة نحدد النطاق بدقة. هذه أهم خطوة لحماية الطرفين: أنت تعرف ما الذي ستدفع مقابله، ونحن نعرف ما الذي سنبنيه. نوضح عدد الصفحات، واللغة، والمزايا المطلوبة، وموعد التسليم التقريبي." },
+        { "type": "list", "items": ["عدد الصفحات والأقسام بشكل صريح", "اللغة العربية أو الإنجليزية أو كلتاهما مع دعم RTL", "النماذج، ولوحات التحكم، وربط APIs إن وُجد", "منصة النشر: Cloudflare Pages أو GitHub Pages", "قيمة السعر النهائية أو نطاقه، وطريقة الدفع بالدينار الليبي أو الدولار"] },
+        { "type": "h2", "text": "٣) التصميم: هوية بسيطة تخدم الهدف" },
+        { "type": "p", "text": "نصمم بواجهة نظيفة ومتجاوبة تعمل على الهاتف قبل سطح المكتب. نستخدم تبايناً واضحاً وخطوطاً مقروءة بالعربية، ونجعل زر التواصل أو الطلب ظاهراً بلا بحث. إذا كان لديك شعار أو ألوان نلتزم بها، وإن لم يكن لديك نبني هوية بسيطة متناسقة مع نشاطك." },
+        { "type": "h2", "text": "٤) البناء: مكوّنات حقيقية لا صور وهمية" },
+        { "type": "p", "text": "نبني الموقع كتطبيق ويب حقيقي بمكوّنات قابلة لإعادة الاستخدام، وليس كصفحة ثابتة بلا بنية. نضيف بيانات SEO وبيانات منظمة، ونهتم بسرعة التحميل، ونجعل نافذة المحادثة ونموذج التواصل يعملان فعلياً. المهم هنا أن ما تراه في العرض هو ما ستحصل عليه." },
+        { "type": "h2", "text": "٥) التسليم: مستودع GitHub عام تملكه أنت" },
+        { "type": "p", "text": "عند الانتهاء نرفع المشروع إلى مستودع GitHub عام. تستطيع عمل fork له أو استخدامه مباشرة، وتجد فيه ملف README يشرح التشغيل والنشر والتحديث. أسرار الحسابات والرموز لا تُرفع أبداً إلى المستودع." },
+        { "type": "h2", "text": "٦) النشر: Cloudflare Edge أو GitHub Pages" },
+        { "type": "p", "text": "ننشر الموقع على Cloudflare Pages أو GitHub Pages، حسب احتياجك. إن كان لديك حساب Cloudflare ونطاق خاص، نوجّه النشر إلى حسابك ونسلّمك التحكم الكامل. وإن لم يكن لديك، نستضيفه في حسابنا حتى تجهز حسابك." },
+        { "type": "quote", "text": "الهدف ليس تسليم ملفات، بل تسليم موقع تملكه وتستطيع تطويره وحدك لاحقاً." },
+        { "type": "p", "text": "هذه هي الطريقة التي نبني بها كل مشروع، صغيراً كان أو كبيراً. إن كان لديك فكرة وتريد معرفة كيف ستبدو في هذه الخطوات، أرسل لنا رسالة قصيرة وسنرد عليك ببداية واضحة." }
+      ],
+      "en": [
+        { "type": "p", "text": "Many clients ask the same question: what exactly happens after I send you a message? At L.COM.LY we believe transparency is part of delivery quality, so here is the full project journey, step by step, and what you get at every stage." },
+        { "type": "h2", "text": "1) Free consultation: understand the problem before proposing a solution" },
+        { "type": "p", "text": "Every project starts with a free consultation through our contact form, WhatsApp or site chat. We do not start with price. We ask simple questions: who is your audience, what should a visitor do after opening the site, and do you already have a domain and hosting? Consultation replies usually arrive within 3 to 5 business days because we study the idea before answering." },
+        { "type": "h2", "text": "2) Written scope and price" },
+        { "type": "p", "text": "Once we understand the idea we define the scope precisely. This is the most important step for protecting both sides: you know what you are paying for, and we know what we are building. We state the number of pages, languages, required features, approximate delivery date and the final price or price range." },
+        { "type": "list", "items": ["Exact number of pages and sections", "Arabic, English or both with full RTL support", "Forms, dashboards and any API integrations", "Publishing platform: Cloudflare Pages or GitHub Pages", "Final price or range, and payment method in LYD or USD"] },
+        { "type": "h2", "text": "3) Design: a simple identity that serves the goal" },
+        { "type": "p", "text": "We design a clean, responsive interface that works on mobile first. Clear contrast, readable Arabic typography and a visible contact or call-to-action button. If you already have a logo and colors we follow them; if not, we build a simple identity that fits your business." },
+        { "type": "h2", "text": "4) Build: real components, not mock screens" },
+        { "type": "p", "text": "We build a real web application with reusable components, not a static picture of a website. We add SEO metadata and structured data, care about loading speed, and make the chat widget and contact form actually work. What you see in the preview is what you get." },
+        { "type": "h2", "text": "5) Delivery: a public GitHub repository you own" },
+        { "type": "p", "text": "When the work is finished we upload the project to a public GitHub repository. You can fork it or use it directly, and a README explains how to run, publish and update it. Account secrets and tokens are never committed to the repository." },
+        { "type": "h2", "text": "6) Publish: Cloudflare Edge or GitHub Pages" },
+        { "type": "p", "text": "We publish on Cloudflare Pages or GitHub Pages depending on your needs. If you already have a Cloudflare account and your own domain, we point the deployment to your account and hand over full control. If not, we host it in our account until yours is ready." },
+        { "type": "quote", "text": "The goal is not to hand over files. The goal is to hand over a website you own and can develop yourself later." },
+        { "type": "p", "text": "This is how we build every project, small or large. If you have an idea and want to see how it fits these steps, send us a short message and we will give you a clear starting point." }
+      ]
+    }
+  },
+  {
+    "slug": "github-source-delivery",
+    "date": "2026-11-20",
+    "category": { "ar": "التسليم والملكية", "en": "Delivery & Ownership" },
+    "readMinutes": 5,
+    "keywords": {
+      "ar": "تسليم شفرة الموقع، مستودع GitHub عام، fork المشروع، ملكية الموقع",
+      "en": "website source delivery, public GitHub repository, fork project, website ownership"
+    },
+    "title": {
+      "ar": "لماذا نسلّم شفرة الموقع على GitHub عام؟",
+      "en": "Why We Deliver Your Website Source on Public GitHub"
+    },
+    "excerpt": {
+      "ar": "مستودع GitHub عام يعني أنك تملك مشروعك فعلياً: تستطيع fork، وتقرأ كل سطر، وتنقله إلى حسابك أو استضافة أخرى في أي وقت. نشرح لك الفائدة العملية وما الذي لا نضعه في المستودع أبداً.",
+      "en": "A public GitHub repository means you genuinely own the project: you can fork it, read every line, and move it to your account or another host at any time. Here is the practical benefit and what we never put in the repository."
+    },
+    "body": {
+      "ar": [
+        { "type": "p", "text": "أكثر ما يميّز طريقة تسليمنا أن المشروع لا يبقى حبيس حسابنا. نضع الشفرة في مستودع GitHub عام، ومعها ملف README يشرح خطوات التشغيل والنشر. إليك سبب اختيارنا هذا النموذج وما يعنيه لك عملياً." },
+        { "type": "h2", "text": "أنت تملك المشروع منذ اليوم الأول" },
+        { "type": "p", "text": "عندما تكون الشفرة في مستودع عام باسمك أو قابل للنقل إليك، فلا أحد يستطيع أن يقول إنك «مستخدم» بدل أن تكون مالكاً. تستطيع فتحه، ونسخه، وتعديله، وطلب مساعدة من مطور آخر لاحقاً دون أن تعتمد علينا." },
+        { "type": "h2", "text": "الـ fork يمنحك نسخة خاصة بلا مخاطرة" },
+        { "type": "p", "text": "زر Fork في GitHub ينشئ نسخة كاملة من المشروع تحت حسابك. جرّب عليها التعديلات، ثم انشر من نسختك متى أردت. هذه طريقة آمنة للتعلّم والتجربة دون كسر النسخة الأصلية التي تعمل." },
+        { "type": "list", "items": ["الشفرة الكاملة للواجهات والصفحات", "ملفات الإعداد وأرقام الإصدارات", "الأصول والصور التي تخص المشروع", "ملف README فيه خطوات التشغيل والنشر", "تعليمات تحديث المحتوى وإضافة صفحة جديدة"] },
+        { "type": "h2", "text": "ما الذي لا نضعه في المستودع؟" },
+        { "type": "p", "text": "لا نرفع أبداً مفاتيح Telegram أو رموز الدفع أو كلمات مرور الحسابات أو بيانات العملاء الخاصة. هذه تُوضع في متغيرات بيئة أو أسرار Cloudflare، خارج الشفرة. المستودع عام بمعنى الشفرة， وليس بمعنى كشف بياناتك." },
+        { "type": "h2", "text": "قابل للنقل إلى أي استضافة" },
+        { "type": "p", "text": "لأن المشروع مبني بتقنيات ويب قياسية، تستطيع نقله إلى Cloudflare Pages أو GitHub Pages أو أي استضافة تدعم Node لاحقاً. لا يوجد قفل تقني يمنعك من_change المزود." },
+        { "type": "quote", "text": "الشفرة المفتوحة ليست تنازلاً عن قيمة العمل؛ هي أقوى ضمانة أن عملك سيبقى ملكاً لك." },
+        { "type": "p", "text": "إن كان لديك بالفعل حساب Cloudflare ونطاقك الخاص، سنوجّه النشر إلى حسابك مباشرة ونسلّمك التحكم كاملاً من أول يوم." }
+      ],
+      "en": [
+        { "type": "p", "text": "The most distinctive part of our delivery model is that your project never stays locked inside our account. We put the code in a public GitHub repository with a README explaining how to run and publish it. Here is why we chose this model and what it means for you." },
+        { "type": "h2", "text": "You own the project from day one" },
+        { "type": "p", "text": "When the code sits in a public repository that is yours or can be transferred to you, nobody can treat you as a user instead of an owner. You can open it, copy it, modify it and ask another developer for help later without depending on us." },
+        { "type": "h2", "text": "Fork gives you a private copy without risk" },
+        { "type": "p", "text": "The Fork button in GitHub creates a complete copy of the project under your account. Try changes there, then publish from your copy whenever you want. It is a safe way to learn and experiment without breaking the working original." },
+        { "type": "list", "items": ["Complete source for interfaces and pages", "Configuration files and version pins", "Project assets and images", "README with run and publish instructions", "Guidance for updating content and adding a page"] },
+        { "type": "h2", "text": "What we never put in the repository" },
+        { "type": "p", "text": "We never commit Telegram tokens, payment keys, account passwords or private customer data. Those live in environment variables or Cloudflare secrets, outside the code. Public means the source is public, not that your data is exposed." },
+        { "type": "h2", "text": "Portable to any host" },
+        { "type": "p", "text": "Because the project uses standard web technologies, you can move it to Cloudflare Pages, GitHub Pages or any Node-capable host later. There is no vendor lock-in preventing you from switching providers." },
+        { "type": "quote", "text": "Open source is not a discount on the work. It is the strongest guarantee that the work stays yours." },
+        { "type": "p", "text": "If you already have a Cloudflare account and your own domain, we point the deployment to your account and hand over full control from the first day." }
+      ]
+    }
+  },
+  {
+    "slug": "cloudflare-pages-vs-github-pages",
+    "date": "2026-11-19",
+    "category": { "ar": "الاستضافة والنشر", "en": "Hosting & Deployment" },
+    "readMinutes": 7,
+    "keywords": {
+      "ar": "Cloudflare Pages، GitHub Pages، استضافة مجانية، نطاق مخصص، نشر موقع",
+      "en": "Cloudflare Pages, GitHub Pages, free hosting, custom domain, deploy website"
+    },
+    "title": {
+      "ar": "Cloudflare Pages أم GitHub Pages؟ دليل عملي لاختيار الاستضافة",
+      "en": "Cloudflare Pages or GitHub Pages? A Practical Hosting Guide"
+    },
+    "excerpt": {
+      "ar": "كلتاهما مجانية وممتازة، لكن لكل منهما نقاط قوة مختلفة. نقارن بين السرعة، والنطاق المخصص، وملفات 404 والتحويلات، والتحليلات، لنقول لك أي واحدة نختار لحالتك.",
+      "en": "Both are free and excellent, but each has different strengths. We compare speed, custom domains, 404 and redirects, and analytics to help you choose the right one for your case."
+    },
+    "body": {
+      "ar": [
+        { "type": "p", "text": "سؤال يتكرر كثيراً: أين ستنشر موقعي؟ الإجابة المختصرة: نحن نستخدم الاثنين، ونختار حسب حاجة المشروع. إليك المقارنة العملية التي نبني عليها قرارنا." },
+        { "type": "h2", "text": "GitHub Pages: بسيط ومرتبط بالمستودع مباشرة" },
+        { "type": "p", "text": "GitHub Pages مناسب للمشاريع المفتوحة والوثائق والمواقع الثابتة الصغيرة. يقرأ من المستودع مباشرة، ويُفعّل عبر GitHub Actions، وهو مجاني تماماً. إن كان هدفك أن يكون المصدر والنشر في مكان واحد، فهو خيار مريح." },
+        { "type": "h2", "text": "Cloudflare Pages: أسرع وأقرب لزائرك" },
+        { "type": "p", "text": "Cloudflare Pages يوزّع الموقع على شبكة حافة عالمية، فيتحميل الصفحة من أقرب نقطة إلى الزائر. يدعم النطاقات المخصصة وSSL مجاناً، وملفات redirects و404 بشكل مرن، وربط تحليلات Cloudflare مع موافقة الزائر. هذا هو خيارنا للمواقع التي تخدم عملاء حقيقيين." },
+        { "type": "list", "items": ["سرعة تحميل أفضل عبر شبكة Edge عالمية", "نطاق مخصص وHTTPS مجاني", "دعم كامل لملفات 404.html وredirects", "تحليلات خفيفة تحترم موافقة ملفات تعريف الارتباط", "نشر تلقائي من كل push على الفرع المحدد"] },
+        { "type": "h2", "text": "ماذا عن Email Routing؟" },
+        { "type": "p", "text": "إن أردت بريداً باسم نطاقك مثل info@l.com.ly، فـ Cloudflare يوفّر Email Routing الذي يحوّل الرسائل إلى بريدك الحقيقي دون اشتراك مدفوع. هذه ميزة إضافية تجعل البقاء داخل نظام Cloudflare عملياً جداً." },
+        { "type": "h2", "text": "قرارنا بالممارسة" },
+        { "type": "p", "text": "نبني المشروع مرة واحدة، وننشره على Cloudflare Pages كخيار أساسي، ونحتفظ بنسخة GitHub Pages كاحتياط. وإذا كان لديك حساب Cloudflare الخاص بك، نوجّه النشر إليك ونسلّمك التحكم كاملاً؛ وإلا نستضيفه عندنا حتى تجهز حسابك." },
+        { "type": "quote", "text": "الاستضافة الجيدة ليست أرخص خيار فقط، بل التي تبقي موقعك سريعاً وقابلاً للنقل وملكاً لك." },
+        { "type": "p", "text": "إن أردت معرفة أي خيار يناسب مشروعك، أرسل لنا نطاقك وحسابك الحالي وسنخبرك بالمسار الأنسب قبل أن تدفع أي شيء." }
+      ],
+      "en": [
+        { "type": "p", "text": "A repeated question: where will my website be published? The short answer is that we use both and choose based on the project. Here is the practical comparison behind our decision." },
+        { "type": "h2", "text": "GitHub Pages: simple and tied to the repository" },
+        { "type": "p", "text": "GitHub Pages suits open projects, documentation and small static sites. It reads directly from the repository, can be enabled through GitHub Actions and is completely free. If your goal is to keep source and hosting in one place, it is a convenient choice." },
+        { "type": "h2", "text": "Cloudflare Pages: faster and closer to your visitor" },
+        { "type": "p", "text": "Cloudflare Pages distributes your site across a global edge network, loading the page from the nearest point to the visitor. It supports custom domains and free SSL, flexible redirects and 404 files, and Cloudflare analytics with visitor consent. This is our choice for sites serving real customers." },
+        { "type": "list", "items": ["Better loading speed through a global edge network", "Free custom domain and HTTPS", "Full support for 404.html and redirects", "Lightweight analytics that respect cookie consent", "Automatic deployment on every push to the chosen branch"] },
+        { "type": "h2", "text": "What about Email Routing?" },
+        { "type": "p", "text": "If you want an address like info@l.com.ly, Cloudflare Email Routing forwards mail to your real inbox with no paid plan. This extra feature makes staying inside Cloudflare very practical." },
+        { "type": "h2", "text": "How we decide in practice" },
+        { "type": "p", "text": "We build the project once, publish on Cloudflare Pages as the primary choice and keep a GitHub Pages copy as a backup. If you have your own Cloudflare account, we point the deployment to you and hand over control. Otherwise we host it for you until your account is ready." },
+        { "type": "quote", "text": "Good hosting is not only the cheapest option. It is the one that keeps your site fast, portable and yours." },
+        { "type": "p", "text": "If you want to know which option fits your project, send us your domain and current account and we will tell you the best path before you pay anything." }
+      ]
+    }
+  },
+  {
+    "slug": "seo-for-libyan-businesses",
+    "date": "2026-11-18",
+    "category": { "ar": "تحسين محركات البحث", "en": "SEO" },
+    "readMinutes": 8,
+    "keywords": {
+      "ar": "SEO ليبيا، تصميم موقع ليبيا، محركات البحث العربية، تحسين موقع عربي",
+      "en": "SEO Libya, website design Libya, Arabic search engines, Arabic website optimization"
+    },
+    "title": {
+      "ar": "SEO للمواقع العربية في ليبيا: دليل يبدأ من اليوم الأول",
+      "en": "SEO for Arabic Websites in Libya: A Guide That Starts on Day One"
+    },
+    "excerpt": {
+      "ar": "الظهور في نتائج البحث لا يبدأ بعد النشر بشهر، بل أثناء كتابة أول سطر من الكود. نشرح لك ما نُعدّه في كل مشروع: عناوين وبيانات واضحة، بيانات منظمة، سرعة، ونصوص مفيدة بالعربية.",
+      "en": "Ranking does not start a month after launch; it starts with the first line of code. Here is what we prepare in every project: clear titles and metadata, structured data, speed and useful Arabic content."
+    },
+    "body": {
+      "ar": [
+        { "type": "p", "text": "كثير من المواقع تُبنى بشكل جميل ثم لا أحد يجدها. السبب غالباً ليس خوارزمية غامضة، بل غياب الأساسيات. هذه الأشياء التي نضعها في مشروعك منذ البداية." },
+        { "type": "h2", "text": "١) ابدأ بالكلمات التي يبحث بها عميلك فعلاً" },
+        { "type": "p", "text": "العميل في ليبيا لا يبحث غالباً بعبارة إنجليزية تقنية. يكتب: «تصميم موقع ليبيا»، أو «موقع شركة طرابلس»، أو «مبرمج مواقع ليبيا». لهذا نكتب العناوين والوصف بنفس لغة العميل، ونضيف نسخة إنجليزية للزوار من الخارج." },
+        { "type": "h2", "text": "٢) عنوان ووصف لكل صفحة" },
+        { "type": "p", "text": "وسوم Title وMeta Description هي أول ما يراه الزائر في نتائج البحث. نجعلها موجزة ومحددة، ونضيف رابطاً canonical واحداً لكل صفحة حتى لا تتكرر الصفحة بأكثر من عنوان." },
+        { "type": "h2", "text": "٣) بيانات منظمة يفهمها محرك البحث" },
+        { "type": "p", "text": "نضيف JSON-LD بمعلومات الشركة وبيانات Contact وService وOffer. هذه البيانات تساعد محرك البحث على فهم من أنت، وما الذي تقدّمه، وكيف التواصل معك، وقد تظهر في نتائج غنية." },
+        { "type": "h2", "text": "٤) السرعة والهاتف أولاً" },
+        { "type": "p", "text": "أغلب زوارك سيفتحون الموقع من هاتف، وغالباً بشبكة ليبيا للاتصالات أو نور. لذلك نبني واجهة متجاوبة، ونضغط الصور، وننشر على حافة Cloudflare. الصفحة السريعة تُقرأ أكثر وتُقيّم أفضل." },
+        { "type": "list", "items": ["تصميم متجاوب يعمل على جميع أحجام الشاشات", "صور مضغوطة بصيغ حديثة", "نصوص واضحة بخط عربي مقروء", "تحميل أقل قدر ممكن من JavaScript غير الضروري"] },
+        { "type": "h2", "text": "٥) تحليلات بموافقة، لا تتبع خفي" },
+        { "type": "p", "text": "نفعّل Google Analytics وCloudflare Web Analytics فقط بعد موافقة الزائر. هذا يحميك قانونياً ويبني ثقة، ولا يمنعك من معرفة عدد الزيارات ومصدرها." },
+        { "type": "h2", "text": "٦) محتوى مفيد باستمرار" },
+        { "type": "p", "text": "قسم المقالات الذي أضفناه ليس للزينة؛ كل مقال يجيب sobre سؤال حقيقي يبحث عنه عميلك. المحتوى المفيد هو ما يجعل الزائر يبقى، ويعود، ثم يرسل لك رسالة." },
+        { "type": "quote", "text": "SEO ليس حيلة تقنية، بل أن تكون إجابتك واضحة وصحيحة قبل أن يسأل العميل." },
+        { "type": "p", "text": "إن أردت أن نراجع موقعك الحالي ونقول لك ما ينقصه، أرسل لنا الرابط وسنرد بملاحظات مختصرة مجاناً." }
+      ],
+      "en": [
+        { "type": "p", "text": "Many websites are beautifully built and then nobody finds them. The reason is rarely a mysterious algorithm; it is usually missing basics. Here is what we put into your project from the beginning." },
+        { "type": "h2", "text": "1) Start with the words your customer actually types" },
+        { "type": "p", "text": "A customer in Libya rarely searches with a technical English phrase. They type website design Libya, a company website in Tripoli, or a web developer in Libya. We write titles and descriptions in the client's language and add an English version for visitors from abroad." },
+        { "type": "h2", "text": "2) A title and description for every page" },
+        { "type": "p", "text": "Title and meta description tags are the first thing a visitor sees in search results. We keep them short and specific, and add one canonical link per page so the same page does not appear under multiple addresses." },
+        { "type": "h2", "text": "3) Structured data search engines understand" },
+        { "type": "p", "text": "We add JSON-LD with company information plus Contact, Service and Offer data. This helps a search engine understand who you are, what you offer and how to reach you, and can appear in rich results." },
+        { "type": "h2", "text": "4) Speed and mobile first" },
+        { "type": "p", "text": "Most of your visitors will open the site on a phone, often on a mobile network. We build a responsive interface, compress images and publish on the Cloudflare edge. A fast page gets read more and rated better." },
+        { "type": "list", "items": ["Responsive design for all screen sizes", "Compressed images in modern formats", "Clear copy with a readable Arabic typeface", "Minimal unnecessary JavaScript"] },
+        { "type": "h2", "text": "5) Analytics with consent, not hidden tracking" },
+        { "type": "p", "text": "We enable Google Analytics and Cloudflare Web Analytics only after the visitor agrees. This protects you legally and builds trust without losing the ability to know how many people visited and where they came from." },
+        { "type": "h2", "text": "6) Useful content, continuously" },
+        { "type": "p", "text": "The articles section we added is not decoration. Each article answers a real question your customer is searching for. Useful content makes visitors stay, return and eventually send you a message." },
+        { "type": "quote", "text": "SEO is not a technical trick. It is having the right, clear answer before the customer asks." },
+        { "type": "p", "text": "If you want us to review your current site and tell you what is missing, send us the link and we will reply with brief notes for free." }
+      ]
+    }
+  },
+  {
+    "slug": "ai-assisted-development",
+    "date": "2026-11-17",
+    "category": { "ar": "الذكاء الاصطناعي", "en": "AI & Development" },
+    "readMinutes": 6,
+    "keywords": {
+      "ar": "تطوير بالذكاء الاصطناعي، وكلاء برمجيون، تطبيقات أندرويد بالذكاء الاصطناعي، تطوير مواقع",
+      "en": "AI assisted development, coding agents, Android app with AI, web development"
+    },
+    "title": {
+      "ar": "كيف نستخدم الذكاء الاصطناعي في بناء المواقع والتطبيقات — بصدق",
+      "en": "How We Use AI to Build Websites and Apps — Honestly"
+    },
+    "excerpt": {
+      "ar": "الذكاء الاصطناعي يسرّع العمل، لكنه لا يفهم نشاطك ولا يتحمل مسؤولية النتيجة. نشرح أين يساعدنا فعلاً، وأين يتخذ القرار بشر حقيقيون، ولماذا السعر يعكس المراجعة لا عدد الأسطر المولّدة.",
+      "en": "AI speeds up the work, but it does not understand your business or carry responsibility for the result. Here is where it genuinely helps, where real humans decide, and why pricing reflects review rather than generated lines of code."
+    },
+    "body": {
+      "ar": [
+        { "type": "p", "text": "هناك الكثير من الوعود حول مواقع تُبنى في دقيقة. نحن نستخدم الذكاء الاصطناعي والوكلاء البرمجيين يومياً، لكننا لا نقول إنه يبني الموقع وحده. هذه صورة دقيقة عن طريقة عملنا." },
+        { "type": "h2", "text": "أين يساعدنا الذكاء الاصطناعي فعلاً؟" },
+        { "type": "list", "items": ["توليد هيكل أولي للمشروع وتسريع كتابة المكوّنات المتكررة", "إعادة صياغة النصوص وتحسين قابلية القراءة بالعربية", "اقتراح اختبارات وكشف أخطاء بسيطة قبل التسليم", "كتابة ملفات README ووثائق الاستخدام", "تسريع تجربة أفكار مختلفة للواجهة قبل اختيار الأفضل"] },
+        { "type": "h2", "text": "أين يبقى القرار لإنسان؟" },
+        { "type": "p", "text": "فهم هدف نشاطك، وترتيب الأولويات، واختيار البنية المناسبة، ومراجعة الأمان والخصوصية، والتأكد أن النموذج يعمل على هاتف حقيقي بشبكة حقيقية. هذه أشياء لا يستطيع الوكيل أن يتحمل مسؤوليتها، ولا نطلب منه ذلك." },
+        { "type": "h2", "text": "مراجعة بشرية قبل كل تسليم" },
+        { "type": "p", "text": "كل سطر يدخل المشروع يمر بمراجعة. نجرب الموقع على أحجام شاشة مختلفة، ونفتح النماذج، ونرسل تجربة فعلية للتأكد أن الإشعار وصل. النتيجة ليست «كود مولّد» بل منتج جرّبناه بأنفسنا." },
+        { "type": "h2", "text": "لماذا السعر ليس مجرد ثمن وقت الآلة؟" },
+        { "type": "p", "text": "لأنك تدفع مقابل الفهم والمراجعة والتسليم والدعم، لا مقابل عدد الأسطر. موقع بـ ١٠٠ إلى ٦٠٠ دولار عندنا يعني نطاقاً محدداً واضحاً، لا وعوداً مفتوحة. والمشاريع الأكبر تُسعّر بعد دراسة حقيقية." },
+        { "type": "h2", "text": "تطبيقات الأندرويد" },
+        { "type": "p", "text": "في تطبيقات الأندرويد يساعدنا الذكاء الاصطناعي في الهيكل الأولي وبعض الشاشات، ثم نراجع الأداء والصلاحيات وحجم التطبيق والتوافق مع الأجهزة الشائعة في السوق الليبي. هدفنا تطبيق يعمل فعلاً، لا عرض توضيحي فقط." },
+        { "type": "quote", "text": "الذكاء الاصطناعي أداة قوية في أيدي فريق مسؤول. أما أن يكون هو الفريق، فهذه ليست خدمة نبيعها." },
+        { "type": "p", "text": "إن كانت لديك فكرة وتريد أن تعرف كيف نبنيها عملياً، ابدأ باستشارة مجانية وسنقول لك ما الذي يمكن أتمتته وما الذي يحتاج قراراً بشرياً." }
+      ],
+      "en": [
+        { "type": "p", "text": "There are many promises about websites built in one minute. We use AI and coding agents every day, but we do not claim the AI builds the site alone. Here is an accurate picture of how we work." },
+        { "type": "h2", "text": "Where AI genuinely helps" },
+        { "type": "list", "items": ["Generating an initial project structure and speeding up repetitive components", "Rewriting copy and improving Arabic readability", "Suggesting tests and catching simple bugs before delivery", "Writing README files and usage documentation", "Trying several interface ideas quickly before choosing the best one"] },
+        { "type": "h2", "text": "Where a human still decides" },
+        { "type": "p", "text": "Understanding your business goal, setting priorities, choosing the right architecture, reviewing security and privacy, and testing on a real phone over a real network. An agent cannot carry responsibility for those, and we do not ask it to." },
+        { "type": "h2", "text": "Human review before every delivery" },
+        { "type": "p", "text": "Every line that enters the project gets reviewed. We test the site at different screen sizes, open the forms and send a real test submission to make sure the notification arrives. The result is not generated code; it is a product we have tried ourselves." },
+        { "type": "h2", "text": "Why the price is not just machine time" },
+        { "type": "p", "text": "You pay for understanding, review, delivery and support, not for the number of generated lines. A $100 to $600 website with us means a clearly defined scope, not open-ended promises. Larger projects are priced after real study." },
+        { "type": "h2", "text": "Android apps" },
+        { "type": "p", "text": "For Android apps, AI helps with the initial structure and some screens. We then review performance, permissions, app size and compatibility with devices common in the Libyan market. Our goal is an app that actually works, not just a demo." },
+        { "type": "quote", "text": "AI is a powerful tool in the hands of a responsible team. Being the team is not a service we sell." },
+        { "type": "p", "text": "If you have an idea and want to know how we would build it, start with a free consultation and we will tell you what can be automated and what needs a human decision." }
+      ]
+    }
+  }
+]

@@ -4,6 +4,7 @@ export interface TranslationData {
   nav: {
     home: string
     portfolio: string
+    articles: string
     pricing: string
     about: string
     contact: string
@@ -46,6 +47,14 @@ export interface TranslationData {
       badge: string
       screenshot: string
     }>
+  }
+  articles: {
+    badge: string
+    title: string
+    subtitle: string
+    readArticle: string
+    minutesRead: string
+    viewAll: string
   }
   pricing: {
     badge: string
@@ -137,6 +146,7 @@ export const translations: Record<Language, TranslationData> = {
     nav: {
       home: "الرئيسية",
       portfolio: "الأعمال والمنصات",
+      articles: "المقالات",
       pricing: "الخدمات والأسعار",
       about: "عن البوابة",
       contact: "اتصل بنا",
@@ -221,6 +231,15 @@ export const translations: Record<Language, TranslationData> = {
           screenshot: "/screenshots/btc.png",
         },
       ],
+    },
+    articles: {
+      badge: "مقالاتنا — دليل عملي",
+      title: "كيف نعمل، ولماذا نبني بهذه الطريقة",
+      subtitle:
+        "خمس مقالات تشرح رحلة المشروع عندنا: من الاستشارة إلى تسليم المصدر على GitHub والنشر على Cloudflare، ومن تحسين محركات البحث إلى استخدام الذكاء الاصطناعي بصدق.",
+      readArticle: "اقرأ المقال",
+      minutesRead: "دقيقة قراءة",
+      viewAll: "تصفح كل المقالات",
     },
     pricing: {
       badge: "خدمات واضحة وأسعار معلنة",
@@ -394,6 +413,7 @@ export const translations: Record<Language, TranslationData> = {
     nav: {
       home: "Home",
       portfolio: "Portfolio",
+      articles: "Articles",
       pricing: "Services & Pricing",
       about: "About",
       contact: "Contact",
@@ -478,6 +498,15 @@ export const translations: Record<Language, TranslationData> = {
           screenshot: "/screenshots/btc.png",
         },
       ],
+    },
+    articles: {
+      badge: "Our articles — a practical guide",
+      title: "How we work, and why we build this way",
+      subtitle:
+        "Five articles explaining our project journey: from consultation to GitHub source delivery and Cloudflare publishing, plus practical SEO and an honest look at AI-assisted development.",
+      readArticle: "Read article",
+      minutesRead: "min read",
+      viewAll: "Browse all articles",
     },
     pricing: {
       badge: "Clear services and published prices",

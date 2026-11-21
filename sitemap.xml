@@ -9,11 +9,52 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.l.com.ly/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.l.com.ly/"/>
   </url>
-  <!-- أضف صفحات جديدة هنا عند إنشائها، مثل:
   <url>
-    <loc>https://www.l.com.ly/services.html</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.l.com.ly/articles/</loc>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.l.com.ly/articles/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.l.com.ly/articles/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.l.com.ly/articles/"/>
   </url>
-  -->
+  <url>
+    <loc>https://www.l.com.ly/articles/how-we-build-websites/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.l.com.ly/articles/how-we-build-websites/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.l.com.ly/articles/en/how-we-build-websites/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.l.com.ly/articles/how-we-build-websites/"/>
+  </url>
+  <url>
+    <loc>https://www.l.com.ly/articles/github-source-delivery/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.l.com.ly/articles/github-source-delivery/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.l.com.ly/articles/en/github-source-delivery/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.l.com.ly/articles/github-source-delivery/"/>
+  </url>
+  <url>
+    <loc>https://www.l.com.ly/articles/cloudflare-pages-vs-github-pages/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.l.com.ly/articles/cloudflare-pages-vs-github-pages/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.l.com.ly/articles/en/cloudflare-pages-vs-github-pages/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.l.com.ly/articles/cloudflare-pages-vs-github-pages/"/>
+  </url>
+  <url>
+    <loc>https://www.l.com.ly/articles/seo-for-libyan-businesses/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.l.com.ly/articles/seo-for-libyan-businesses/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.l.com.ly/articles/en/seo-for-libyan-businesses/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.l.com.ly/articles/seo-for-libyan-businesses/"/>
+  </url>
+  <url>
+    <loc>https://www.l.com.ly/articles/ai-assisted-development/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.l.com.ly/articles/ai-assisted-development/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.l.com.ly/articles/en/ai-assisted-development/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.l.com.ly/articles/ai-assisted-development/"/>
+  </url>
 </urlset>

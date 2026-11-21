@@ -110,6 +110,12 @@ export function Navbar({
               {t.nav.portfolio}
             </button>
             <button
+              onClick={() => scrollToSection("articles")}
+              className="px-3.5 py-1.5 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent/60 rounded-full transition-colors"
+            >
+              {t.nav.articles}
+            </button>
+            <button
               onClick={() => scrollToSection("pricing")}
               className="px-3.5 py-1.5 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent/60 rounded-full transition-colors"
             >
@@ -222,6 +228,12 @@ export function Navbar({
               className="w-full text-start px-4 py-2.5 rounded-xl font-medium text-foreground hover:bg-accent/60 transition-colors"
             >
               {t.nav.portfolio}
+            </button>
+            <button
+              onClick={() => scrollToSection("articles")}
+              className="w-full text-start px-4 py-2.5 rounded-xl font-medium text-foreground hover:bg-accent/60 transition-colors"
+            >
+              {t.nav.articles}
             </button>
             <button
               onClick={() => scrollToSection("pricing")}

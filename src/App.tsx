@@ -4,6 +4,7 @@ import { translations } from "@/data/translations"
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
 import { Portfolio } from "@/components/portfolio"
+import { Articles } from "@/components/articles"
 import { Pricing } from "@/components/pricing"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
@@ -89,6 +90,8 @@ export function App() {
         />
 
         <Portfolio lang={lang} t={t} />
+
+        <Articles lang={lang} t={t} />
 
         <Pricing
           lang={lang}
