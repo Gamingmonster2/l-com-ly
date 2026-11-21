@@ -16,6 +16,18 @@
       "ar": "رحلة المشروع عندنا واضحة من البداية: استشارة مجانية، نطاق مكتوب، تصميم، بناء، تسليم المصدر على GitHub، ثم نشر على Cloudflare أو GitHub Pages. بلا وعود غامضة ولا مراحل مخفية.",
       "en": "Our project journey is clear from day one: a free consultation, a written scope, design, build, source delivery on GitHub, then publishing on Cloudflare or GitHub Pages. No vague promises and no hidden stages."
     },
+    "images": [
+      {
+        "src": "/article-images/build-blueprint.jpg",
+        "alt": { "ar": "مخطط معماري يوضح مرحلة التخطيط وتصميم المشروع", "en": "Architectural blueprint representing project planning and design" },
+        "caption": { "ar": "كل مشروع يبدأ بمخطط واضح قبل كتابة أول سطر من الكود.", "en": "Every project starts with a clear plan before the first line of code." }
+      },
+      {
+        "src": "/article-images/build-architecture.jpg",
+        "alt": { "ar": "تكوين معماري مجرد يعكس بنية الموقع وتنظيم مكوّناته", "en": "Abstract architectural structure representing website architecture" },
+        "caption": { "ar": "بنية الموقع الجيدة تجعل التطوير والتحديث أسهل لاحقاً.", "en": "Good site architecture makes future development and updates easier." }
+      }
+    ],
     "body": {
       "ar": [
         { "type": "p", "text": "كثير من العملاء يسألون: ماذا يحدث بالضبط بعد أن أرسل لكم رسالة؟ في L.COM.LY نؤمن أن الشفافية جزء من جودة التسليم، لذلك نشرح لك اليوم رحلة المشروع كاملة، خطوة بخطوة، وما الذي ستحصل عليه في كل مرحلة." },
@@ -72,6 +84,18 @@
       "ar": "مستودع GitHub عام يعني أنك تملك مشروعك فعلياً: تستطيع fork، وتقرأ كل سطر، وتنقله إلى حسابك أو استضافة أخرى في أي وقت. نشرح لك الفائدة العملية وما الذي لا نضعه في المستودع أبداً.",
       "en": "A public GitHub repository means you genuinely own the project: you can fork it, read every line, and move it to your account or another host at any time. Here is the practical benefit and what we never put in the repository."
     },
+    "images": [
+      {
+        "src": "/article-images/github-code.jpg",
+        "alt": { "ar": "شاشة تعرض أسطراً من الكود تمثّل الشفرة المصدرية للمشروع", "en": "Screen displaying lines of code representing project source" },
+        "caption": { "ar": "الشفرة المصدرية بين يديك، لا في صندوق مغلق.", "en": "The source code is in your hands, not inside a closed box." }
+      },
+      {
+        "src": "/article-images/github-code-dark.jpg",
+        "alt": { "ar": "كود برمجي ملون على شاشة داكنة", "en": "Colorful programming code on a dark screen" },
+        "caption": { "ar": "ملف README واضح يشرح لك التشغيل والنشر والتحديث.", "en": "A clear README explains how to run, publish and update the project." }
+      }
+    ],
     "body": {
       "ar": [
         { "type": "p", "text": "أكثر ما يميّز طريقة تسليمنا أن المشروع لا يبقى حبيس حسابنا. نضع الشفرة في مستودع GitHub عام، ومعها ملف README يشرح خطوات التشغيل والنشر. إليك سبب اختيارنا هذا النموذج وما يعنيه لك عملياً." },
@@ -120,6 +144,18 @@
       "ar": "كلتاهما مجانية وممتازة، لكن لكل منهما نقاط قوة مختلفة. نقارن بين السرعة، والنطاق المخصص، وملفات 404 والتحويلات، والتحليلات، لنقول لك أي واحدة نختار لحالتك.",
       "en": "Both are free and excellent, but each has different strengths. We compare speed, custom domains, 404 and redirects, and analytics to help you choose the right one for your case."
     },
+    "images": [
+      {
+        "src": "/article-images/hosting-servers.jpg",
+        "alt": { "ar": "رفوف خوادم في مركز بيانات تمثّل استضافة الموقع", "en": "Server racks in a data center representing website hosting" },
+        "caption": { "ar": "الاستضافة هي المكان الذي يعيش فيه موقعك على الإنترنت.", "en": "Hosting is where your website lives on the internet." }
+      },
+      {
+        "src": "/article-images/hosting-datacenter.jpg",
+        "alt": { "ar": "ممر مركز بيانات يحتوي على أجهزة وخوادم الشبكة", "en": "Data center corridor with network servers and equipment" },
+        "caption": { "ar": "شبكة الحافة تقرّب موقعك من زائرك أينما كان.", "en": "An edge network brings your site closer to your visitor anywhere." }
+      }
+    ],
     "body": {
       "ar": [
         { "type": "p", "text": "سؤال يتكرر كثيراً: أين ستنشر موقعي؟ الإجابة المختصرة: نحن نستخدم الاثنين، ونختار حسب حاجة المشروع. إليك المقارنة العملية التي نبني عليها قرارنا." },
@@ -168,6 +204,18 @@
       "ar": "الظهور في نتائج البحث لا يبدأ بعد النشر بشهر، بل أثناء كتابة أول سطر من الكود. نشرح لك ما نُعدّه في كل مشروع: عناوين وبيانات واضحة، بيانات منظمة، سرعة، ونصوص مفيدة بالعربية.",
       "en": "Ranking does not start a month after launch; it starts with the first line of code. Here is what we prepare in every project: clear titles and metadata, structured data, speed and useful Arabic content."
     },
+    "images": [
+      {
+        "src": "/article-images/seo-matrix.jpg",
+        "alt": { "ar": "خلفية أكواد وبيانات مجردة تمثّل فهرسة محركات البحث", "en": "Abstract code and data background representing search indexing" },
+        "caption": { "ar": "محركات البحث تقرأ بنية صفحتك قبل أن تقرأ شكلها.", "en": "Search engines read your page structure before they read its design." }
+      },
+      {
+        "src": "/article-images/seo-research.jpg",
+        "alt": { "ar": "عدسة مكبرة فوق رسوم بيانية تمثّل تحليل نتائج البحث", "en": "Magnifying glass over charts representing search analytics" },
+        "caption": { "ar": "البيانات الحقيقية تقول لك أي كلمة تجلب لك عميلاً.", "en": "Real data tells you which keyword brings you a customer." }
+      }
+    ],
     "body": {
       "ar": [
         { "type": "p", "text": "كثير من المواقع تُبنى بشكل جميل ثم لا أحد يجدها. السبب غالباً ليس خوارزمية غامضة، بل غياب الأساسيات. هذه الأشياء التي نضعها في مشروعك منذ البداية." },
@@ -224,6 +272,18 @@
       "ar": "الذكاء الاصطناعي يسرّع العمل، لكنه لا يفهم نشاطك ولا يتحمل مسؤولية النتيجة. نشرح أين يساعدنا فعلاً، وأين يتخذ القرار بشر حقيقيون، ولماذا السعر يعكس المراجعة لا عدد الأسطر المولّدة.",
       "en": "AI speeds up the work, but it does not understand your business or carry responsibility for the result. Here is where it genuinely helps, where real humans decide, and why pricing reflects review rather than generated lines of code."
     },
+    "images": [
+      {
+        "src": "/article-images/ai-circuit.jpg",
+        "alt": { "ar": "لوحة دوائر إلكترونية تمثّل الذكاء الاصطناعي والتقنية", "en": "Electronic circuit board representing AI and technology" },
+        "caption": { "ar": "الذكاء الاصطناعي أداة سريعة، لكن القرار يبقى لفريق بشري.", "en": "AI is a fast tool, but the decision stays with a human team." }
+      },
+      {
+        "src": "/article-images/ai-chip.jpg",
+        "alt": { "ar": "شريحة إلكترونية بتفاصيل دقيقة تمثّل معالجة الذكاء الاصطناعي", "en": "Detailed microchip representing AI processing" },
+        "caption": { "ar": "المراجعة البشرية قبل التسليم هي ما يحوّل الكود إلى منتج.", "en": "Human review before delivery is what turns code into a product." }
+      }
+    ],
     "body": {
       "ar": [
         { "type": "p", "text": "هناك الكثير من الوعود حول مواقع تُبنى في دقيقة. نحن نستخدم الذكاء الاصطناعي والوكلاء البرمجيين يومياً، لكننا لا نقول إنه يبني الموقع وحده. هذه صورة دقيقة عن طريقة عملنا." },

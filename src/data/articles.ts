@@ -20,6 +20,11 @@ export interface Article {
   keywords: LocalizedText
   title: LocalizedText
   excerpt: LocalizedText
+  images: Array<{
+    src: string
+    alt: LocalizedText
+    caption: LocalizedText
+  }>
   body: { ar: ArticleBlock[]; en: ArticleBlock[] }
 }
 

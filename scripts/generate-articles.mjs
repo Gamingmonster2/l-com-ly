@@ -74,6 +74,19 @@ const esc = (value) => String(value)
 
 const jsonLd = (data) => JSON.stringify(data).replace(/</g, "\\u003c")
 
+function renderFigure(image, lang, eager = false) {
+  const c = copy[lang]
+  const alt = lang === "ar" ? image.alt.ar : image.alt.en
+  const caption = lang === "ar" ? image.caption.ar : image.caption.en
+  return `<figure class="article-figure glass-card reveal my-9 overflow-hidden rounded-2xl border border-border/70 p-2 shadow-lg">
+    <div class="article-figure-inner relative overflow-hidden rounded-xl">
+      <img src="${esc(image.src)}" alt="${esc(alt)}" loading="${eager ? "eager" : "lazy"}" decoding="async" width="1200" height="800" class="article-img block h-48 w-full object-cover sm:h-64 md:h-72">
+      <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/25 via-transparent to-transparent"></div>
+    </div>
+    <figcaption class="px-3 pb-1 pt-3 text-center text-[11px] leading-relaxed text-muted-foreground">${esc(caption)}</figcaption>
+  </figure>`
+}
+
 function renderBlocks(blocks) {
   return blocks.map((block) => {
     if (block.type === "h2") return `<h2 class="mt-10 mb-3 text-xl font-bold text-foreground sm:text-2xl">${esc(block.text)}</h2>`
@@ -110,6 +123,27 @@ function shell({ lang, title, description, keywords, canonical, ld, body }) {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="${cssHref}">
+  <style>
+    .article-figure { position: relative; }
+    .article-figure::before {
+      content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px;
+      background: linear-gradient(110deg, transparent 20%, rgba(250,250,250,.65) 50%, transparent 80%);
+      background-size: 200% 100%; pointer-events: none; opacity: .75;
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor; mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); mask-composite: exclude;
+      animation: lcom-beam 3.5s linear infinite;
+    }
+    @keyframes lcom-beam { to { background-position: -200% 0; } }
+    .article-img { transition: transform .7s cubic-bezier(.2,.7,.2,1); }
+    .article-figure:hover .article-img { transform: scale(1.04); }
+    .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.in-view { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .article-figure::before { animation: none; }
+      .article-img { transition: none; }
+    }
+  </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-R3ZC7B10TV"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -176,6 +210,21 @@ function shell({ lang, title, description, keywords, canonical, ld, body }) {
       document.getElementById('lcom-decline').addEventListener('click', function () { decide('denied'); });
     })();
   </script>
+  <script>
+    (function () {
+      var items = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        items.forEach(function (el) { el.classList.add('in-view'); });
+        return;
+      }
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) { entry.target.classList.add('in-view'); observer.unobserve(entry.target); }
+        });
+      }, { rootMargin: '0px 0px -40px 0px', threshold: 0.08 });
+      items.forEach(function (el) { observer.observe(el); });
+    })();
+  </script>
 </body>
 </html>
 `
@@ -200,6 +249,9 @@ for (const lang of ["ar", "en"]) {
     <div class="grid gap-5 sm:grid-cols-2">
       ${articles.map((a) => `
         <a href="${prefix}${a.slug}/" class="group rounded-2xl border border-border/80 bg-card/60 p-5 transition-colors hover:border-foreground/25">
+          <div class="article-figure reveal mb-4 overflow-hidden rounded-xl border border-border/70">
+            <img src="${esc(a.images[0].src)}" alt="${esc(lang === "ar" ? a.images[0].alt.ar : a.images[0].alt.en)}" loading="lazy" decoding="async" width="1200" height="800" class="article-img block h-36 w-full object-cover sm:h-44">
+          </div>
           <p class="mb-2 text-[11px] font-bold text-muted-foreground">${esc(lang === "ar" ? a.category.ar : a.category.en)} · ${esc(c.date(a.date))}</p>
           <h2 class="mb-2 text-lg font-bold leading-snug text-foreground group-hover:underline">${esc(lang === "ar" ? a.title.ar : a.title.en)}</h2>
           <p class="mb-3 text-xs leading-relaxed text-muted-foreground">${esc(lang === "ar" ? a.excerpt.ar : a.excerpt.en)}</p>
@@ -235,6 +287,9 @@ for (const lang of ["ar", "en"]) {
     const category = lang === "ar" ? article.category.ar : article.category.en
     const url = `${SITE}${prefix}${article.slug}/`
     const related = articles.filter((a) => a.slug !== article.slug).slice(0, 3)
+    const midpoint = Math.ceil(article.body[lang].length / 2)
+    const firstHalf = renderBlocks(article.body[lang].slice(0, midpoint))
+    const secondHalf = renderBlocks(article.body[lang].slice(midpoint))
 
     const body = `
       <nav class="mb-8 text-xs text-muted-foreground">
@@ -251,7 +306,9 @@ for (const lang of ["ar", "en"]) {
       </p>
       <p class="mb-9 border-s-4 border-foreground/20 ps-5 text-base font-medium leading-relaxed text-foreground/80">${esc(excerpt)}</p>
 
-      <article>${renderBlocks(article.body[lang])}</article>
+      ${renderFigure(article.images[0], lang, true)}
+
+      <article>${firstHalf}${renderFigure(article.images[1], lang)}${secondHalf}</article>
 
       <div class="mt-12 rounded-2xl border border-border/80 bg-foreground/[0.04] p-6">
         <h2 class="mb-2 text-lg font-bold text-foreground">${c.startProject}</h2>
@@ -283,6 +340,7 @@ for (const lang of ["ar", "en"]) {
         datePublished: article.date,
         dateModified: article.date,
         keywords: lang === "ar" ? article.keywords.ar : article.keywords.en,
+        image: article.images.map((image) => `${SITE}${image.src}`),
         inLanguage: lang,
         author: { "@type": "Organization", name: "L.COM.LY", url: SITE },
         publisher: { "@type": "Organization", name: "L.COM.LY", url: SITE },

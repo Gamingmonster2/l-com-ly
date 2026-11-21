@@ -2,6 +2,7 @@ import type { Language, TranslationData } from "@/data/translations"
 import { articles, articleUrl, formatArticleDate } from "@/data/articles"
 import { BlurFade } from "@/components/magicui/blur-fade"
 import { MagicCard } from "@/components/magicui/magic-card"
+import { BorderBeam } from "@/components/magicui/border-beam"
 import { ArrowLeft, ArrowRight, BookOpen, Clock3, Sparkles } from "lucide-react"
 
 interface ArticlesProps {
@@ -48,7 +49,21 @@ export function Articles({ lang, t }: ArticlesProps) {
                 href={articleUrl(article.slug, lang)}
                 className="group block h-full rounded-3xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/40"
               >
-                <MagicCard className="h-full rounded-3xl p-6 sm:p-7">
+                <MagicCard className="h-full rounded-3xl p-5 sm:p-6">
+                  <div className="relative mb-5 overflow-hidden rounded-2xl border border-border/70">
+                    <img
+                      src={article.images[0].src}
+                      alt={lang === "ar" ? article.images[0].alt.ar : article.images[0].alt.en}
+                      width={1200}
+                      height={800}
+                      loading="lazy"
+                      decoding="async"
+                      className="h-40 w-full object-cover transition-transform duration-700 group-hover:scale-105 sm:h-44"
+                    />
+                    <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent" />
+                    <BorderBeam size={160} duration={6} borderWidth={1.5} />
+                  </div>
+
                   <div className="mb-5 flex flex-wrap items-center gap-2.5">
                     <span className="rounded-full border border-foreground/15 bg-foreground/[0.06] px-3 py-1 text-[11px] font-bold text-foreground/80">
                       {lang === "ar" ? article.category.ar : article.category.en}
